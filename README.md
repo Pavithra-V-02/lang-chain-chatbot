@@ -216,39 +216,5 @@ Common issues and solutions:
 | `Token Limit Exceeded` | Reduce MAX_TOKENS in .env |
 | `Memory Issues` | Use 'summary' memory type for long conversations |
 
-## Performance Tips
 
-- 🚀 Use `gpt-3.5-turbo` for faster, cheaper responses
-- 💰 Use `gpt-4` for more sophisticated reasoning
-- 🧠 Switch to summary memory for conversations > 50 turns
-- ⚡ Lower temperature for consistent, focused responses
-- 📊 Monitor token usage to manage costs
 
-## Future Enhancements
-
-- [ ] Vector database integration for semantic memory
-- [ ] Multi-user support with session management
-- [ ] Conversation analysis and insights
-- [ ] Custom system prompts
-- [ ] Integration with external tools/APIs
-- [ ] Voice input/output support
-- [ ] RAG (Retrieval Augmented Generation) capabilities
-
-## License
-
-MIT License - Feel free to use this project for learning and development.
-
-## Support
-
-For issues, questions, or suggestions:
-1. Check the [FAQ](#faq) section
-2. Review [LangChain Documentation](https://docs.langchain.com/)
-3. Open an issue on GitHub
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-**Made with ❤️ for AI Engineering enthusiasts**
