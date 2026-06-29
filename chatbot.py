@@ -1,13 +1,3 @@
-"""Conversational AI Chatbot with Memory using LangChain.
-
-This module implements a conversational AI chatbot with the ability to maintain
-conversation history and context using LangChain's memory capabilities.
-
-References:
-    - LangChain Documentation: https://docs.langchain.com/oss/python/langchain/overview
-    - Memory Management: https://python.langchain.com/docs/modules/memory/
-"""
-
 import os
 from typing import Optional
 from dotenv import load_dotenv
@@ -21,17 +11,7 @@ load_dotenv()
 
 
 class ConversationalChatbot:
-    """A conversational AI chatbot with memory capabilities.
-    
-    This chatbot maintains conversation history and can engage in multi-turn
-    conversations with context awareness.
-    
-    Attributes:
-        llm: The language model instance (ChatOpenAI)
-        memory: The memory buffer for storing conversation history
-        conversation_chain: The LangChain conversation chain
-    """
-
+   
     def __init__(
         self,
         model_name: str = "gpt-3.5-turbo",
@@ -39,14 +19,7 @@ class ConversationalChatbot:
         max_tokens: int = 500,
         memory_type: str = "buffer",
     ):
-        """Initialize the conversational chatbot.
-        
-        Args:
-            model_name: The OpenAI model to use (default: gpt-3.5-turbo)
-            temperature: Temperature for response randomness (0.0-1.0)
-            max_tokens: Maximum tokens in response
-            memory_type: Type of memory ('buffer' or 'summary')
-        """
+       
         # Initialize the language model
         self.llm = ChatOpenAI(
             model_name=model_name,
@@ -107,19 +80,14 @@ Assistant:"""
         return self.memory.buffer
 
     def clear_memory(self) -> None:
-        """Clear the conversation history and start fresh."""
+        
         self.memory.clear()
 
     def save_history(self, filename: str) -> None:
-        """Save conversation history to a file.
-        
-        Args:
-            filename: The file to save history to
-        """
+       
         with open(filename, "w") as f:
             f.write(self.get_conversation_history())
-
-
+            
 def main():
     """Main function to run the chatbot in interactive mode."""
     print("=" * 60)
